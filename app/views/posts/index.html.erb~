@@ -1,25 +1,25 @@
-<h1>Listing posts</h1>
+<h1>Lista de entradas</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Published</th>
+    <th>Nombre</th>
+    <th>Titulo</th>
+    <th>Contenido</th>
+    <th>Publicado</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-<%= paginate @post %>
+<%= paginate @posts %>
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.name %></td>
     <td><%= post.title %></td>
     <td><%= post.content %></td>
     <td><%= post.published %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Ver', post %></td>
+    <td><%= link_to 'Editar', edit_post_path(post) %></td>
+    <td><%= link_to 'Borrar', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

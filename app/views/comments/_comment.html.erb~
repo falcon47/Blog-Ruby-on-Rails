@@ -8,6 +8,7 @@
 </p>
 
 <p>
-  <%= link_to 'Delete Comment', [comment.post, comment], :method => :delete,
-		confirm => 'Tas crazy?' %>
+  <%= link_to 'Delete Comment', [comment.post, comment], 
+		:method => :delete,
+		:confirm => 'Tas crazy?' %>
 </p>
