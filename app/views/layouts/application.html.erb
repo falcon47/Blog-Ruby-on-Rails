@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body style = "background: #959595">
+
+<div id="user_nav">
+  <% if user_signed_in? %>
+    Eres <%= current_user.email %>, No pollo?
+    <%= link_to 'Pirarse', destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to 'Darse de alta', new_user_registration_path %> o 
+    <%= link_to "tirar pa'dentro", new_user_session_path %>
+  <% end %>
+</div>
+
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+
+<%= yield %>
+
+</body>
+</html>
