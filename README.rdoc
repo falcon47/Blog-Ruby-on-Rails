@@ -1,3 +1,12 @@
+Añadido Kaminari & Simple_form al proyecto.
+
+Para el Kaminari hemos incluido la gema en el gemfile ( kaminari ) y añadir que
+queremos paginar el index cada 2 post.
+
+Para el simple_form hemos igualmente instalado la gema ( simple_form ) y cambiado
+el tipo de formularios a simple_form 
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
